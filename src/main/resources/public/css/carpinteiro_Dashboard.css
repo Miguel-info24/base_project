@@ -1,0 +1,50 @@
+.container{
+    background-color: white;
+    padding: 40px;
+    color: black;
+    margin: 70px;
+    padding-top: 0;
+    border-radius: 30px;
+}
+
+.menu-topo {
+  background-color: #333;
+  padding: 15px 20px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-radius: 10px 10px 0 0; /* opcional: deixa as bordas arredondadas no topo */
+  position: relative; /* faz o menu ficar dentro da div container */
+}
+
+/* Lista horizontal */
+.menu-topo ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start; 
+  margin: 0; /* remove margem da lista */
+  padding: 0; /* remove padding da lista */
+}
+
+/* Itens do menu */
+.menu-topo li {
+  margin-right: 20px;
+}
+
+/* Links do menu */
+.menu-topo a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu-topo a:hover {
+  color: #f0a500;
+}
+
+
+main {
+  padding-top: 70px;
+}

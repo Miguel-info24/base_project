@@ -1,4 +1,3 @@
-package br.edu.ifpr.pgua.eic.tads;
 
 import static org.junit.Assert.assertTrue;
 

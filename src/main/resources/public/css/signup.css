@@ -1,0 +1,130 @@
+.texto-principal {
+  color: #1ecfff;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  gap: 80px;               
+  padding: 40px;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center; 
+  padding-right: 50px;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 50px; 
+}
+
+.left .barco {
+  width: 350px;
+  margin: 20px 0 15px 0;
+  transform: translateY(-40px); 
+}
+
+.left .texto {
+  color: #1ecfff;
+  font-size: 26px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.5;
+  transform: translateY(-30px); 
+}
+
+
+
+.signup-box {
+  background: #07293f;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  width: 500px;
+  height: 500px;
+  transform: translateY(-20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.signup-box h2 {
+  color: #1ecfff;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: bold;    
+}
+
+.signup-box label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.signup-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #223a73;
+  color: #fff;
+  font-size: 14px;
+}
+
+.signup-box input::placeholder {
+  color: #ccc;
+}
+
+.signup-box button {
+  width: 100%;
+  padding: 14px;
+  background-color: #0da8e9;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  letter-spacing: 1px;
+}
+
+.signup-box button:hover {
+  background-color: #1ecfff;
+}
+
+.signup-box select{
+width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #223a73;
+  color: #fff;
+  font-size: 14px;}
+
+.redirect {
+  margin-top: 15px;
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.redirect a {
+  color: #1ecfff;
+  text-decoration: none;
+}
