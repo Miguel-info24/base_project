@@ -1,35 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="name" content="Miguel Vannucci">
+    <title>Carpinteiro OsBarqueiros</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carpinteiro_Dashboard.css">
-    <title>Carpinteiro OsBarqueiros</title>
 </head>
-
 <body>
-    <header>
-        <div class="logo-area">
-            <img src="img/logo.png" alt="Logo">
-            <h1 class="texto-principal">Os Barqueiros</h1>
-        </div>
-    </header>
-    
-    <div class="container">
-        <div class="menu">
-            <nav class="menu-topo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">logout</a></li>
-                </ul>
-            </nav>
+<header>
+    <div class="logo-area">
+        <img src="img/logo.png" alt="Logo">
+        <h1 class="texto-principal">Os Barqueiros</h1>
+    </div>
+</header>
+
+<div class="container">
+    <div class="menu">
+        <nav class="menu-topo">
+            <ul>
+                <li><a href="#">Atualizar</a></li>
+                <li><a href="#">Barcos</a></li>
+                <li><a href="login.html" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        <h2>Pedidos Recebidos</h2>
+        <div class="pedidos-container" id="pedidos-container">
+            <!-- Pedidos serão inseridos dinamicamente pelo JS -->
         </div>
     </div>
-</body>
+</div>
 
+<script>
+    // Simulação da classe Pedido em JS
+    class Pedido {
+        constructor(id, nome, descricao, preco, tipo, status, dataInicio, dataFim, barco) {
+            this.id = id;
+            this.nome = nome;
+            this.descricao = descricao;
+            this.preco = preco;
+            this.tipo = tipo;
+            this.status = status;
+            this.dataInicio = dataInicio;
+            this.dataFim = dataFim;
+            this.barco = barco;
+        }
+    }
+
+    // Simulação de pedidos recebidos
+    const pedidos = [
+        new Pedido("001", "João Silva", "Conserto de casco", 500.0, "Conserto", "novo", "01/09/2025", "05/09/2025", "Barco Azul"),
+        new Pedido("002", "Maria Santos", "Pintura do casco", 700.0, "Pintura", "novo", "02/09/2025", "04/09/2025", "Barco Vermelho"),
+        new Pedido("003", "Carlos Oliveira", "Troca de vela", 300.0, "Manutenção", "novo", "03/09/2025", "03/09/2025", "Barco Verde")
+    ];
+
+    const container = document.getElementById('pedidos-container');
+
+    pedidos.forEach(pedido => {
+        const card = document.createElement('div');
+        card.classList.add('pedido-card');
+        card.innerHTML = `
+            <h3>Pedido #${pedido.id}</h3>
+            <p><strong>Cliente:</strong> ${pedido.nome}</p>
+            <p><strong>Descrição:</strong> ${pedido.descricao}</p>
+            <p><strong>Tipo:</strong> ${pedido.tipo}</p>
+            <p><strong>Preço:</strong> R$ ${pedido.preco.toFixed(2)}</p>
+            <p><strong>Status:</strong> <span class="status">${pedido.status}</span></p>
+            <p><strong>Período:</strong> ${pedido.dataInicio} até ${pedido.dataFim}</p>
+            <p><strong>Barco:</strong> ${pedido.barco}</p>
+            <button class="btn-visto">Marcar como visto</button>
+        `;
+        container.appendChild(card);
+    });
+
+    // Botão "Marcar como visto"
+    document.querySelectorAll('.btn-visto').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.pedido-card');
+            card.classList.add('visto');
+            const statusSpan = card.querySelector('.status');
+            statusSpan.textContent = 'visto';
+            btn.disabled = true;
+            btn.textContent = 'Visto';
+        });
+    });
+</script>
+</body>
 </html>

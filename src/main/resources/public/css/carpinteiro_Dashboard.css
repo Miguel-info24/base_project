@@ -1,50 +1,100 @@
-.container{
-    background-color: white;
-    padding: 40px;
-    color: black;
-    margin: 70px;
-    padding-top: 0;
-    border-radius: 30px;
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 40px;
 }
 
-.menu-topo {
-  background-color: #333;
-  padding: 15px 20px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  border-radius: 10px 10px 0 0; /* opcional: deixa as bordas arredondadas no topo */
-  position: relative; /* faz o menu ficar dentro da div container */
+.menu {
+    width: 220px;
+    background-color: #0a1c2c;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
-/* Lista horizontal */
 .menu-topo ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-start; 
-  margin: 0; /* remove margem da lista */
-  padding: 0; /* remove padding da lista */
+    list-style: none;
+    padding: 0;
 }
 
-/* Itens do menu */
-.menu-topo li {
-  margin-right: 20px;
+.menu-topo ul li {
+    margin-bottom: 15px;
+    transition: transform 0.2s;
 }
 
-/* Links do menu */
-.menu-topo a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+.menu-topo ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #1ecfff;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
-.menu-topo a:hover {
-  color: #f0a500;
+.menu-topo ul li a:hover {
+    background-color: #1ecfff;
+    color: #07293f;
+    transform: scale(1.05);
 }
 
+.menu-topo ul li a#logout:hover {
+    background-color: #e02d2d;
+    color: #fff;
+}
 
-main {
-  padding-top: 70px;
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.pedidos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.pedido-card {
+    background-color: #07293f;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.pedido-card.visto {
+    opacity: 0.6;
+    background-color: #1a1f3a;
+}
+
+.pedido-card h3 {
+    margin: 0;
+    color: #1ecfff;
+}
+
+.pedido-card button.btn-visto {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0da8e9;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pedido-card button.btn-visto:hover {
+    background-color: #1ecfff;
 }

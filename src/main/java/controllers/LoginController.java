@@ -11,10 +11,10 @@ public class LoginController {
         String senha = ctx.formParam("senha");
 
         // Aqui você verificaria no "banco" (por enquanto pode ser uma lista mock)
-        if(email.equals("teste@teste.com") && senha.equals("123")){
+        //if(email.equals("migsvannucci@gmail.com") && senha.equals("12e4s678.")){
             ctx.redirect("carpinteiro_Dashboard.html");
-        } else {
-            ctx.status(401).result("Login inválido");
-        }
+        //} else {
+        //    ctx.status(401).result("Login inválido");
+        //}
     };
 }
