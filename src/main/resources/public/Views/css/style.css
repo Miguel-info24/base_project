@@ -9,13 +9,14 @@ html, body {
   height: 100%;
   overflow: hidden; /* sem scroll */
   background-color: #0d3a57;
-  color: #fff;
+  color: #ffffff;
 }
 
 /* Header */
 header {
   width: 100%;
   background: linear-gradient(to right, #0078c9, #01c6f9);
+  padding: 20px, 0;
   padding: 10px;
   display: flex;
   align-items: center;

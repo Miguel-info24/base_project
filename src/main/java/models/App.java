@@ -1,9 +1,13 @@
 package models;
 
-import controllers.*;
+import java.util.ArrayList;
+
+import controllers.CarpinteiroDashboardController;
+import controllers.IndexController;
+import controllers.LoginController;
+import controllers.SignupController;
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
-import java.util.ArrayList;
 
 public class App {
 
@@ -12,7 +16,7 @@ public class App {
 
     public static void main(String[] args) {
         Javalin app = Javalin.create(config -> {
-            config.staticFiles.add("/public", Location.CLASSPATH);
+            config.staticFiles.add("/public/Views", Location.CLASSPATH);
         }).start(7000);
 
         // Controllers

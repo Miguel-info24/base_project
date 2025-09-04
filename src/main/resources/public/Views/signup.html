@@ -21,6 +21,7 @@
   <div class="container">
     <!-- Lado esquerdo -->
     <div class="left">
+      <h2 class="texto">Cadastre-se e</h2>
       <img src="img/barco.png" alt="Imagem de barco" class="barco">
       <h2 class="texto">Entre para o nosso time<br>e faça parte da jornada!</h2>
     </div>
@@ -66,27 +67,29 @@
 
   <!-- Script no final do body -->
   <script>
-    const form = document.getElementById('signupForm');
+const form = document.getElementById('pedidoForm');
 
-    form.addEventListener('submit', function(e) {
-      e.preventDefault(); // evita envio real do formulário
+form.addEventListener('submit', function(e) {
+    e.preventDefault(); // evita envio real do formulário
 
-      // Aqui você poderia validar os dados se quiser
-      const senha = document.getElementById('senha').value;
-      const confirmar = document.getElementById('confirmar').value;
+    // Aqui você poderia validar os dados, se quiser
+    const descricao = document.getElementById('descricao').value;
+    const tipo = document.getElementById('tipo').value;
+    const barco = document.getElementById('barco').value;
 
-      if (senha !== confirmar) {
-        alert('As senhas não coincidem!');
+    if (!descricao || !tipo || !barco || tipo === "Selecione...") {
+        alert('Por favor, preencha todos os campos!');
         return;
-      }
+    }
 
-      // Simulação de cadastro concluído
-      alert('Cadastro realizado com sucesso!');
+    // Simulação de envio do pedido
+    alert('Pedido enviado com sucesso!');
 
-      // Redireciona para o dashboard do carpinteiro
-      window.location.href = "carpinteiro_Dashboard.html";
-    });
-  </script>
+    // Opcional: redireciona para o dashboard do cliente
+    window.location.href = "cliente_dashBoard.html";
+});
+</script>
+
 </body>
 
 </html>

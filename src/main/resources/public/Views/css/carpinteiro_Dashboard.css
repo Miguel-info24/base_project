@@ -1,7 +1,13 @@
 .container {
     display: flex;
-    padding: 20px;
+    padding: 40px;
+    padding-bottom: 70px;
     gap: 40px;
+    background-color: #2d3d52;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 4px 20px #000;
+
 }
 
 .menu {
@@ -50,6 +56,7 @@
     align-items: center;
     gap: 20px;
     padding: 20px;
+    
 }
 
 .pedidos-container {
@@ -97,4 +104,7 @@
 
 .pedido-card button.btn-visto:hover {
     background-color: #1ecfff;
+}
+.pedidos{
+    color:#1ecfff ;
 }
