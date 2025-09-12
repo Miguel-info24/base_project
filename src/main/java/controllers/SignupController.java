@@ -1,7 +1,10 @@
 package controllers;
 
 import io.javalin.http.Handler;
-import models.*;
+import models.App;
+import models.Carpinteiro;
+import models.Client;
+import models.User;
 
 public class SignupController {
 

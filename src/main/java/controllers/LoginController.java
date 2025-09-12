@@ -1,20 +1,22 @@
 package controllers;
+
 import io.javalin.http.Handler;
 
 public class LoginController {
+
     public Handler get = ctx -> {
         ctx.redirect("login.html");
     };
 
-    public Handler post = ctx -> {
-        String email = ctx.formParam("email");
-        String senha = ctx.formParam("senha");
+    public Handler postLogin = ctx -> {
+        String userType = ctx.formParam("userType");
 
-        // Aqui você verificaria no "banco" (por enquanto pode ser uma lista mock)
-        //if(email.equals("migsvannucci@gmail.com") && senha.equals("12e4s678.")){
+        if ("cliente".equals(userType)) {
+            ctx.redirect("cliente_Dashboard.html");
+        } else if ("carpinteiro".equals(userType)) {
             ctx.redirect("carpinteiro_Dashboard.html");
-        //} else {
-        //    ctx.status(401).result("Login inválido");
-        //}
+        } else {
+            ctx.status(400).result("Tipo de usuário inválido");
+        }
     };
 }

@@ -8,6 +8,7 @@
   <title>Cadastro - Os Barqueiros</title>
   <link rel="stylesheet" href="css/signup.css">
   <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -19,14 +20,12 @@
   </header>
 
   <div class="container">
-    <!-- Lado esquerdo -->
     <div class="left">
       <h2 class="texto">Cadastre-se e</h2>
       <img src="img/barco.png" alt="Imagem de barco" class="barco">
       <h2 class="texto">Entre para o nosso time<br>e faça parte da jornada!</h2>
     </div>
 
-    <!-- Lado direito -->
     <div class="right">
       <div class="signup-box">
         <h2>Crie sua Conta</h2>
@@ -64,32 +63,7 @@
       </div>
     </div>
   </div>
-
-  <!-- Script no final do body -->
-  <script>
-const form = document.getElementById('pedidoForm');
-
-form.addEventListener('submit', function(e) {
-    e.preventDefault(); // evita envio real do formulário
-
-    // Aqui você poderia validar os dados, se quiser
-    const descricao = document.getElementById('descricao').value;
-    const tipo = document.getElementById('tipo').value;
-    const barco = document.getElementById('barco').value;
-
-    if (!descricao || !tipo || !barco || tipo === "Selecione...") {
-        alert('Por favor, preencha todos os campos!');
-        return;
-    }
-
-    // Simulação de envio do pedido
-    alert('Pedido enviado com sucesso!');
-
-    // Opcional: redireciona para o dashboard do cliente
-    window.location.href = "cliente_dashBoard.html";
-});
-</script>
-
+  <script src="js/signup.js"></script>
 </body>
 
 </html>

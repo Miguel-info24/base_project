@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="name" content="Miguel Vannucci">
+    <meta name="name" content="Miguel Vannucci">
     <link rel="stylesheet" href="css/Enter_Page.css">
     <link rel="stylesheet" href="css/style.css">
     <title>OsBarqueiros</title>
@@ -27,12 +27,15 @@
         <div class="right-login">
             <div class="clicar-card">
                 <h2 class="texto-principal">Escolha qual conta irá utilizar</h2>
-                <button class="btn-clicar" onclick="window.location.href='login.html'">Cliente</button>
-                <button class="btn-clicar" onclick="window.location.href='login.html'">Carpinteiro</button>
+                <button class="btn-clicar" onclick="takeOption('cliente'), window.location.href='/login'">Cliente</button>
+                <button class="btn-clicar" onclick="takeOption('carpinteiro'), window.location.href='/login'">Carpinteiro</button>
             </div>
+
+
         </div>
     </div>
+    <script src="js/take_option.js"></script>
 </body>
-</body>
+
 
 </html>
