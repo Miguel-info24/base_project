@@ -21,9 +21,10 @@
         <div class="menu">
             <nav class="menu-topo">
                 <ul>
-                    <li><a href="cliente_fazerPedido.html">Fazer Pedido</a></li>
-                    <li><a href="cliente_cancelarPedido.html">Cancelar Pedido</a></li>
-                    <li><a href="index.html" id="logout">Logout</a></li>
+                    <li><a href="/cliente_Dashboard/fazerPedido">Fazer Pedido</a></li>
+                    <li><a href="/cliente_Dashboard/cancelarPedido">Cancelar Pedido</a></li>
+                    <li><a href="/">Logout</a></li>
+
                 </ul>
             </nav>
         </div>

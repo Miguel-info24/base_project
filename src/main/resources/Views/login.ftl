@@ -43,7 +43,7 @@
           <button type="submit">Entrar</button>
         </form>
 
-        <p class="redirect">Não tem conta? <a href="signup.html">Cadastre-se</a></p>
+        <p class="redirect">Não tem conta? <a href="signup.ftl">Cadastre-se</a></p>
       </div>
     </div>
   </section>

@@ -5,16 +5,16 @@ import io.javalin.http.Handler;
 public class LoginController {
 
     public Handler get = ctx -> {
-        ctx.redirect("login.html");
+        ctx.render("login.ftl");
     };
 
-    public Handler postLogin = ctx -> {
+    public Handler post = ctx -> {
         String userType = ctx.formParam("userType");
 
         if ("cliente".equals(userType)) {
-            ctx.redirect("cliente_Dashboard.html");
+            ctx.render("cliente_Dashboard.ftl");
         } else if ("carpinteiro".equals(userType)) {
-            ctx.redirect("carpinteiro_Dashboard.html");
+            ctx.render("carpinteiro_Dashboard.ftl");
         } else {
             ctx.status(400).result("Tipo de usuário inválido");
         }

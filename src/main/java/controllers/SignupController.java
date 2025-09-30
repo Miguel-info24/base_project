@@ -1,7 +1,6 @@
 package controllers;
 
 import io.javalin.http.Handler;
-import models.App;
 import models.Carpinteiro;
 import models.Client;
 import models.User;
@@ -10,7 +9,7 @@ public class SignupController {
 
     // Abre a página de cadastro
     public Handler get = ctx -> {
-        ctx.redirect("cadastro.html");
+        ctx.render("signup.ftl");
     };
 
     // Processa o cadastro (POST)
@@ -27,10 +26,7 @@ public class SignupController {
             novo = new Carpinteiro(name, email, password, cpf, phone);
         } else {
             novo = new Client(name, email, password, cpf, phone);
-        }
-
-        App.usuarios.add(novo); 
-
+        } 
         ctx.redirect("/login"); 
     };
 }

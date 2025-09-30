@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cliente - Fazer Pedido</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- CSS global -->
-    <link rel="stylesheet" href="css/cliente_fazerPedido.css"> <!-- CSS específico -->
+    <link rel="stylesheet" href="/css/style.css"> 
+    <link rel="stylesheet" href="/css/cliente_fazerPedido.css"> 
 </head>
 
 <body>
     <header>
         <div class="logo-area">
-            <img src="img/logo.png" alt="Logo">
+            <img src="/img/logo.png" alt="Logo">
             <h1 class="texto-principal">Os Barqueiros</h1>
         </div>
     </header>
@@ -22,7 +22,7 @@
         <div class="menu">
             <nav class="menu-topo">
                 <ul>
-                    <li><a href="cliente_Dashboard.html">Voltar</a></li>
+                    <li><a href="/cliente_Dashboard">Voltar</a></li>
                 </ul>
             </nav>
         </div>
@@ -52,7 +52,7 @@
 
         </div>
     </div>
-    <script src="js/cliente_fazerPedido.js"></script>
+    <script src="/js/cliente_fazerPedido.js"></script>
 
 
 </body>

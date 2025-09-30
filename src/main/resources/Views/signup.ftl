@@ -58,7 +58,7 @@
         </form>
 
         <div class="redirect">
-          <p>Já tem conta? <a href="login.html">Fazer login</a></p>
+          <p>Já tem conta? <a href="login.ftl">Fazer login</a></p>
         </div>
       </div>
     </div>

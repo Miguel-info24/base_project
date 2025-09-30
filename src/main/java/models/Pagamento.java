@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Pagamento {
     private String id;
     private double valor;
-    private String metodo; // PIX, Cartão, Dinheiro
+    private String metodo;
     private LocalDate dataPagamento;
 
     public Pagamento(String id, double valor, String metodo, LocalDate dataPagamento) {

@@ -23,7 +23,7 @@
                 <ul>
                     <li><a href="#">Atualizar</a></li>
                     <li><a href="#">Barcos</a></li>
-                    <li><a href="index.html" id="logout">Logout</a></li>
+                    <li><a href="/" id="logout">Logout</a></li>
                 </ul>
             </nav>
         </div>

@@ -11,7 +11,7 @@ public class Pedido {
     private String status;
     private LocalDate dataInicio;
     private LocalDate dataFim;
-    private Barco barco;  // Associação com Barco
+    private Barco barco;
 
     public Pedido(String id, String nome, String descricao, double preco, String tipo,
                   String status, LocalDate dataInicio, LocalDate dataFim, Barco barco) {
